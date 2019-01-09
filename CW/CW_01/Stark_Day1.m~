@@ -1,0 +1,10 @@
+clc
+clear
+disp('Robert Mechanical - Due Sept-29-2020');
+disp('ENGR 700');
+
+argument1 = 3+4;
+argument2 = 4+5;
+argument_a = -2;
+output_a = sqrt(argument_a);
+fprintf('The end');
