@@ -1,0 +1,175 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>stark_allangles_j</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-01-23"><meta name="DC.source" content="stark_allangles_j.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">clc
+clear
+disp(<span class="string">'Name and Date:         Jeremy Stark 01/23/2019'</span>);
+disp(<span class="string">'Course and Section:    ENGR297 and class # 22749'</span>);
+disp(<span class="string">'Problem:               Matlab Homework 2'</span>);
+disp(<span class="string">'Statement:             Using matlab to calculate trigonometric values'</span>);
+disp(<span class="string">' '</span>);
+
+<span class="comment">%Problem 4%</span>
+disp(<span class="string">'Problem 4a'</span>);
+value4a = cos((5*pi)/(6)).^2 * sin((7*pi)/(8)).^2 + ((tan((pi/6)*log(8)))/(sqrt(7)));
+disp(value4a);
+
+disp(<span class="string">'Problem 4b'</span>);
+value4b = cos((5*pi)/(6)).^2 * sin((7*pi)/(8)).^2 + (tan( (pi*log(8))/(6) ) / (7*(5/2)));
+disp(value4b);
+
+<span class="comment">%Problem 14%</span>
+disp(<span class="string">'Problem 14a'</span>);
+a = 21; b = 45; c = 60;
+disp(<span class="string">'angle gamma:'</span>);
+angle_gamma = acosd( ( (a.^2)+(b.^2)-(c.^2) )/(2*a*b) );
+disp(angle_gamma);
+
+disp(<span class="string">'Problem 14b'</span>);
+disp(<span class="string">'angle alpha:'</span>);
+angle_alpha = acosd( ( (b.^2)+(c.^2)-(a.^2) )/(2*b*c) );
+disp(angle_alpha);
+
+disp(<span class="string">'Problem 14b'</span>);
+disp(<span class="string">'angle beta:'</span>);
+angle_beta = acosd( ( (a.^2)+(c.^2)-(b.^2) )/(2*a*c) );
+disp(angle_beta);
+
+disp(<span class="string">'Problem 14c'</span>);
+disp(<span class="string">'angle_alpha + angle_beta + angle_gamma = '</span>);
+final_angle = angle_alpha + angle_beta + angle_gamma;
+disp(final_angle);
+</pre><pre class="codeoutput">Name and Date:         Jeremy Stark 01/23/2019
+Course and Section:    ENGR297 and class # 22749
+Problem:               Matlab Homework 2
+Statement:             Using matlab to calculate trigonometric values
+ 
+Problem 4a
+    0.8323
+
+Problem 4b
+    0.2191
+
+Problem 14a
+angle gamma:
+  126.8699
+
+Problem 14b
+angle alpha:
+   16.2602
+
+Problem 14b
+angle beta:
+   36.8699
+
+Problem 14c
+angle_alpha + angle_beta + angle_gamma = 
+   180
+
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+clc
+clear
+disp('Name and Date:         Jeremy Stark 01/23/2019');
+disp('Course and Section:    ENGR297 and class # 22749');
+disp('Problem:               Matlab Homework 2');
+disp('Statement:             Using matlab to calculate trigonometric values');
+disp(' ');
+
+%Problem 4%
+disp('Problem 4a');
+value4a = cos((5*pi)/(6)).^2 * sin((7*pi)/(8)).^2 + ((tan((pi/6)*log(8)))/(sqrt(7)));
+disp(value4a);
+
+disp('Problem 4b');
+value4b = cos((5*pi)/(6)).^2 * sin((7*pi)/(8)).^2 + (tan( (pi*log(8))/(6) ) / (7*(5/2)));
+disp(value4b);
+
+%Problem 14%
+disp('Problem 14a');
+a = 21; b = 45; c = 60;
+disp('angle gamma:');
+angle_gamma = acosd( ( (a.^2)+(b.^2)-(c.^2) )/(2*a*b) );
+disp(angle_gamma);
+
+disp('Problem 14b');
+disp('angle alpha:');
+angle_alpha = acosd( ( (b.^2)+(c.^2)-(a.^2) )/(2*b*c) );
+disp(angle_alpha);
+
+disp('Problem 14b');
+disp('angle beta:');
+angle_beta = acosd( ( (a.^2)+(c.^2)-(b.^2) )/(2*a*c) );
+disp(angle_beta);
+
+disp('Problem 14c');
+disp('angle_alpha + angle_beta + angle_gamma = ');
+final_angle = angle_alpha + angle_beta + angle_gamma;
+disp(final_angle);
+##### SOURCE END #####
+--></body></html>
