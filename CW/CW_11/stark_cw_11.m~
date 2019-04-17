@@ -1,0 +1,37 @@
+clc
+clear
+fprintf('Name and Date:         Jeremy Stark 04/17/2019\n');
+fprintf('Course and Section:    ENGR297 and class # 22749\n');
+fprintf('Problem:               Matlab Classwork 11\n');
+fprintf('Statement:             Turboprop Engine\n\n');
+
+startTime = input('Enter start time: ');
+endTime = input('Enter end time: ');
+intervalStart = input('Enter start of interval to plot: ');
+intervalEnd = input('Enter end of internval to plot: ');
+
+row = 1;
+for time = startTime:endTime
+   
+velocity = (0.00001 * time^3) - (0.00488*time^2) + (0.75795 * time) + 181.3566;
+
+acceleration = 23 - (0.000062) * velocity^2;
+
+dataPoint(row, 1) = time;
+dataPoint(row, 2) = velocity;
+dataPoint(row, 3) = acceleration;
+    
+row = row + 1;
+end
+
+subplot(2, 1, 1);
+title('Velocity vs Time');
+xlabel('Time');
+ylabel('Velocity');
+xlim([intervalStart intervalEnd]);
+ylim([180 dataPoint(intervalEnd, 2)]);
+hold on
+for time = intervalStart:intervalEnd
+    plot(dataPoint(time,1), dataPoint(time,2, 'k--', 'linewidth', 4);
+end
+hold off
